@@ -2,9 +2,8 @@ const mongoose = require("mongoose");
 
 const milkingSessionSchema = new mongoose.Schema(
   {
-    animalName: {
-      type: String,
-      required: true,
+    milkQuantity: {
+      type: Number,
     },
     startTime: {
       type: Date,
@@ -12,9 +11,8 @@ const milkingSessionSchema = new mongoose.Schema(
     },
     endTime: Date,
     duration: Number, // minutes
-    musicPlayed: String,
   },
   { timestamps: true },
 );
 
-module.exports = mongoose.model("MilkingSession", milkingSessionSchema);
+module.exports = mongoose.model("milking_sessions", milkingSessionSchema);

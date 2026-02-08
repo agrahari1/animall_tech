@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
 });
 
-export const startMilking = (data) => API.post("/milking/start", data);
+export const startMilking = (data) => API.post("/start", data);
 
-export const stopMilking = (id) => API.put(`/milking/stop/${id}`);
+export const stopMilking = (id, data) => API.put(`/stop/${id}`, data);
 
-export const getHistory = () => API.get("/milking");
+export const getHistory = () => API.get("/");
