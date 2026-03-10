@@ -112,13 +112,13 @@ export default function Home() {
 
       {/* ================= INITIAL ================= */}
       {!isRunning && !showMilkInput && (
-        <button
-          onClick={handleStart}
-          className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-semibold
-                     transition hover:bg-blue-700 hover:scale-105"
-        >
-          Start Milking Session
-        </button>
+      <button
+  onClick={handleStart}
+  className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-semibold
+             transition hover:bg-blue-700 hover:scale-105 cursor-pointer"
+>
+  Start Milking Session
+</button>
       )}
 
       {/* ================= RUNNING ================= */}
@@ -132,14 +132,14 @@ export default function Home() {
             {!isPaused ? (
               <button
                 onClick={handlePause}
-                className="px-6 py-3 bg-yellow-500 text-white rounded-xl"
+                className="px-6 py-3 bg-yellow-500 text-white rounded-xl cursor-pointer"
               >
                 Pause
               </button>
             ) : (
               <button
                 onClick={handleResume}
-                className="px-6 py-3 bg-green-500 text-white rounded-xl"
+                className="px-6 py-3 bg-green-500 text-white rounded-xl cursor-pointer"
               >
                 Resume
               </button>
@@ -147,7 +147,7 @@ export default function Home() {
 
             <button
               onClick={handleStop}
-              className="px-6 py-3 bg-red-500 text-white rounded-xl"
+              className="px-6 py-3 bg-red-500 text-white rounded-xl cursor-pointer"
             >
               Stop
             </button>
@@ -180,7 +180,7 @@ export default function Home() {
 
           <button
             onClick={handleSubmitMilk}
-            className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold"
+            className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold cursor-pointer"
           >
             Submit
           </button>
